@@ -1,0 +1,196 @@
+    .home-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #1E88E5;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+}
+ /* Base Styles */
+ body {
+ font-family: 'Roboto', sans-serif;
+ line-height: 1.6;
+ color: #333;
+ background-color: #E3F2FD; /* Light Blue */
+ 
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center; /* Center content */
+ min-height: 100%;
+ }
+
+ /* Main container */
+ .main-container {
+ width: 100%;
+ max-width: 1200px;
+ display: flex;
+ justify-content: space-between; /* Position feedback form and comments side by side */
+ align-items: flex-start; /* Align items at the top */
+ margin-top: 30px;
+ margin-left:0px;
+ }
+
+ /* Feedback Form Section */
+ .feedback-form-section {
+ width: 80%; /* Adjust width for the form to be on the left */
+ background-color: #BBDEFB; /* Lighter Blue */
+ padding: 30px;
+ color: #1E88E5; /* Dark Blue */
+ text-align: center;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ border-radius: 8px;
+ margin-bottom: 50px;
+ 
+ 
+ }
+
+ .feedback-form-section h2 {
+ margin-bottom: 20px;
+ color: #1E88E5;
+ }
+
+ .form-group {
+ margin-bottom: 15px;
+ }
+
+ label {
+ display: block;
+ margin-bottom: 5px;
+ font-weight: bold;
+ color: #1E88E5;
+ }
+
+ input, textarea, select {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ font-size: 16px;
+ background-color: #E3F2FD; /* Light blue */
+ color: #333;
+ }
+
+ textarea {
+ min-height: 120px;
+ resize: vertical;
+ }
+
+ button {
+ background-color: #1E88E5; /* Dark Blue */
+ color: white;
+ border: none;
+ padding: 12px 20px;
+ font-size: 16px;
+ border-radius: 4px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+ width: 100%;
+ }
+
+ button:hover {
+ background-color: #1565C0; /* Darker blue on hover */
+ }
+
+ /* Comments Section */
+ .comments-section {
+ width: 40%; /* Adjust width for the comments to be on the right */
+ background-color: #E1F5FE; /* Very light blue */
+ padding: 30px;
+ margin-left:90px;
+ margin-right:10px;
+ color: #333;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ border-radius: 8px;
+ overflow-y: auto;
+ max-height: 900px; /* Limit the height of the comments section */
+ }
+
+ .comments-section h3 {
+ color: #1E88E5;
+ margin-bottom: 20px;
+ text-align: center;
+ }
+
+ .comment {
+ background-color: white;
+ padding: 15px;
+ border-radius: 6px;
+ margin-bottom: 15px;
+ box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .comment-header {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 10px;
+ }
+
+ .comment-author {
+ font-weight: bold;
+ color: #1E88E5;
+ }
+
+ .comment-date {
+ color: #888;
+ font-size: 14px;
+ }
+
+ .comment-content {
+ line-height: 1.5;
+ }
+
+ /* .rating {
+ display: flex;
+ margin: 10px 0;
+ }
+
+ .star {
+ color: rgb(248, 211, 2);
+ font-size: 20px;
+ margin-left: 2px;
+ 
+ } */
+ .star {
+ color: rgb(248, 211, 2);
+ font-size: 20px;
+ margin: 0 2px; /* Adjust margin for spacing between stars */
+ cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+.rating {
+ display: flex;
+ justify-content: center; /* Center stars horizontally */
+ align-items: center; /* Center stars vertically (if needed) */
+ gap: 5px; /* Add spacing between stars */
+}
+
+ /* Image Styling */
+ .form-image {
+ width: 100%;
+ max-width: 200px;
+ margin: 0 auto 20px;
+ display: block;
+ }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+ .main-container {
+ flex-direction: column; /* Stack feedback form and comments on smaller screens */
+ align-items: center;
+ }
+
+ .feedback-form-section, .comments-section {
+ width: 90%; /* Take up most of the width on smaller screens */
+ padding: 20px;
+ margin-bottom: 20px;
+ }
+
+ button {
+ font-size: 14px;
+ }
+ }

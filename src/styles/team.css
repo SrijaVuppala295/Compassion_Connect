@@ -1,0 +1,189 @@
+
+
+/* Team Profiles Section */
+#team-profiles {
+    padding: 80px 0;
+}
+
+.team-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 340px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.team-member .info {
+    padding: 25px;
+}
+
+.team-member h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.team-member .role {
+    color: #da4d15;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.team-member .bio {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #da4d15;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: #da4d15;
+    color: #fff;
+}
+
+/* Join Team CTA */
+#join-team {
+    background-color: #f0f0f0;
+    padding: 70px 0;
+    text-align: center;
+}
+
+#join-team h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#join-team p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #da4d15;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #da4d15;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #da4d15;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1100px) {
+    .team-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 60px 0 40px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    #team-profiles {
+        padding: 50px 0;
+    }
+    
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-member {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    #join-team {
+        padding: 50px 0;
+    }
+    
+    #join-team h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .team-member .info {
+        padding: 20px;
+    }
+    
+    .team-member h3 {
+        font-size: 1.4rem;
+    }
+}
