@@ -23,6 +23,12 @@ We are thrilled to contribute to open-source and collaborate with the amazing GS
 
 Let's build something amazing together! 💖
 
+## 💬 Join Our Community on Discord
+
+We collaborate, discuss ideas, and help contributors on our official **Discord server**.  
+Click the button below to join us and be part of **Compassion Connect – GSSoC 2025**! 🎉
+
+[![Join Discord](https://img.shields.io/badge/Join%20Us%20on-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/VUXCEY9M)
 
 
 # 🌍 Compassion-Connect
