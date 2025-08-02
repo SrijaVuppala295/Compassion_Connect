@@ -1,3 +1,14 @@
+# Compassion Connect
+
+[![GSSoC 2025](https://img.shields.io/badge/GSSoC-2025-orange?style=for-the-badge&logo=github)](https://gssoc.girlscript.tech/)
+
+**Compassion Connect** is officially a part of **GirlScript Summer of Code 2025 (GSSoC 2025)**! 🎉  
+
+![GSSoC 2025](https://raw.githubusercontent.com/GSSoC-Community/Images/main/gssoc2025-banner.png)
+
+We are excited to contribute to open-source and collaborate with the GSSoC community. 🚀
+
+
 # 🌍 Compassion-Connect
 
 ## 📌 Project Description
