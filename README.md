@@ -4,7 +4,7 @@
 
 **Compassion Connect** is officially a part of **GirlScript Summer of Code 2025 (GSSoC 2025)**! 🎉  
 
-![GSSoC 2025](https://raw.githubusercontent.com/GSSoC-Community/Images/main/gssoc2025-banner.png)
+![GSSoC 2025](PA.jpg)
 
 We are excited to contribute to open-source and collaborate with the GSSoC community. 🚀
 
