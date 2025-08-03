@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Navbar from "./Navbar";
 import eventsData from "../js/eventData";
 
 import "../styles/events.css";
@@ -39,7 +38,6 @@ const EventDetails = () => {
 
   return (
     <div>
-      <Navbar />
 
       <div className="container">
         <div className="event-details-container" style={{ marginTop: "60px" }}>

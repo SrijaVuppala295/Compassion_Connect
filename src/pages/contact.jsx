@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/contact.css';
 import images from '../assets/images';
-import Navbar from './Navbar';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,7 +39,6 @@ const Contact = () => {
 
   return (
     <div>
-      <Navbar />
 
       <div className="containerr">
         <div className="image-section">
