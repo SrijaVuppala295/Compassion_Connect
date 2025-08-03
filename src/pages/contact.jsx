@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-//import '../styles/contact.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import '../styles/contact.css';
 import images from '../assets/images';
+import Navbar from './Navbar';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,12 +40,9 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="home-icon">
-        <a href="/">
-          <FontAwesomeIcon icon={faHome} />
-        </a>
-      </div>
-      <div className="container">
+      <Navbar />
+
+      <div className="containerr">
         <div className="image-section">
           <img
             src={images.brandCommunication}

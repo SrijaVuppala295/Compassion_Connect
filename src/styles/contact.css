@@ -15,28 +15,12 @@
             position: relative;
         } */
 
-        .home-icon {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-        }
-
-        .home-icon a {
-            color: #ff6b00;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .home-icon a:hover {
-            color: #e65c00;
-        }
-
-        .container {
+        .containerr {
             display: flex;
             width: 80%;
             max-width: 1000px;
-            height: 450px;
+            min-height: 450px;
+            margin: 200px auto 0 auto;
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
