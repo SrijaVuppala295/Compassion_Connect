@@ -152,4 +152,10 @@ We welcome all contributions to improve the platform! 🎉
 
 For issues or feature suggestions, feel free to open an [issue](https://github.com/SrijaVuppala295/Compassion-Connect/issues).
 
+## 📜 Code of Conduct
+
+To ensure a welcoming and inclusive environment for everyone, please make sure to read and follow our Code of Conduct:
+
+🤝 **[Code of Conduct](CODE_OF_CONDUCT.md)**
+
 Let's build a better world through tech. ❤️
