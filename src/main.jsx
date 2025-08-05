@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
-import Event from './pages//event.jsx';
+import Event from './pages/event.jsx';
 import Feedback from './pages/feedback.jsx';
 import VolunteerRegistration from './pages/volunteer.jsx';
 
