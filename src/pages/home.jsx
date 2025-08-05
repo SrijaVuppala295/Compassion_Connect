@@ -89,6 +89,7 @@ const CompassionConnect = () => {
               <li><a href="#events" onClick={() => scrollToSection('events')}>Events</a></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><a href="#blog" onClick={() => scrollToSection('blog')}>Blog</a></li>
+              <li><Link to="/signUp">SignUp</Link></li>
               <li><a href="#logout">Logout</a></li>
               <li><a href="#leaderboard">Leaderboard</a></li>
             </ul>
