@@ -6,10 +6,12 @@ import Contact from './pages/contact.jsx';
 import Event from './pages//event.jsx';
 import Feedback from './pages/feedback.jsx';
 import VolunteerRegistration from './pages/volunteer.jsx';
+import Navbar from './pages/Navbar.jsx';        
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

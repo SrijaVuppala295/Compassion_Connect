@@ -21,8 +21,9 @@ const Navbar = () => {
             <li><a href="/#causes">Our Causes</a></li>
             <li><a href="/#events">Events</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/ourteam">Team</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/leaderboard">Leaderboard</a></li>
           </ul>
         </nav>
       </div>
