@@ -1,124 +1,166 @@
-import React, { useState } from 'react';
-//import '../styles/contact.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import images from '../assets/images';
+import React, { useState, useEffect } from "react";
+import contactImg from "../assets/images/brand communication-pana.png"; 
+import "../styles/contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
 
+  // Optional: Scroll to top on mount (for SPA routing)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const { name, email, subject, message } = formData;
-
     if (name && email && subject && message) {
-      console.log({
-        name,
-        email,
-        subject,
-        message
-      });
-
       setShowSuccess(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-
+      setFormData({ name: "", email: "", subject: "", message: "" });
       setTimeout(() => setShowSuccess(false), 5000);
     }
   };
 
   return (
-    <div>
-      <div className="home-icon">
-        <a href="/">
-          <FontAwesomeIcon icon={faHome} />
-        </a>
-      </div>
-      <div className="container">
-        <div className="image-section">
-          <img
-            src={images.brandCommunication}
-            alt="Contact Us Illustration"
-            onError={(e) => {
-              e.target.src = '/api/placeholder/500/500';
-              e.target.alt = 'Contact Illustration Placeholder';
-            }}
-          />
-        </div>
-
-        <div className="form-section">
-          <h2>Get in Touch</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Your Name</label>
+    <>
+      {/* Main Contact Section */}
+      <div className="cc-contact-bg">
+        <div className="cc-contact-main">
+          <div className="cc-contact-img">
+            <img
+              src={contactImg}
+              alt="Contact Illustration"
+              onError={(e) => {
+                e.target.src = "/api/placeholder/600/400";
+                e.target.alt = "Contact Illustration Placeholder";
+              }}
+            />
+          </div>
+          <div className="cc-contact-form">
+            <h2>Get in Touch</h2>
+            <form onSubmit={handleSubmit} autoComplete="off">
+              <label>Your Name</label>
               <input
                 type="text"
-                id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                placeholder="Enter your name"
                 required
               />
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label>Email Address</label>
               <input
                 type="email"
-                id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="Enter your email"
                 required
               />
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
+              <label>Subject</label>
               <input
                 type="text"
-                id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
+                placeholder="Type subject"
                 required
               />
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="message">Your Message</label>
+              <label>Your Message</label>
               <textarea
-                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                placeholder="Type your message"
                 required
               />
-            </div>
 
-            <button type="submit">Send Message</button>
-
-            {showSuccess && (
-              <div className="success-message">
-                Your message has been sent successfully! We'll get back to you soon.
-              </div>
-            )}
-          </form>
+              <button type="submit">Send Message</button>
+              {showSuccess && (
+                <div className="cc-success-msg">
+                  Your message has been sent successfully! We'll get back to you soon.
+                </div>
+              )}
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Footer */}
+      <footer className="cc-footer">
+        <div className="cc-footer-main">
+          <div className="cc-footer-col">
+            <h3>About Us</h3>
+            <div className="cc-footer-underline"></div>
+            <p>
+              CompassionConnect is a global<br></br>
+               nonprofit organization dedicated to <br></br>empowering communities and <br></br>changing lives through sustainable<br></br> development, education, and<br></br> humanitarian aid.
+            </p>
+            <div className="cc-footer-social">
+              <a href="#"><i className="fab fa-facebook-f"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              <a href="#"><i className="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div className="cc-footer-col">
+            <h3>Quick Links</h3>
+            <div className="cc-footer-underline"></div>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/#about">About Us</a></li>
+              <li><a href="/#events">Events</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/feedback">Feedback</a></li>
+              <li><a href="/volunteer">Become a Volunteer</a></li>
+            </ul>
+          </div>
+          <div className="cc-footer-col">
+            <h3>Our Programs</h3>
+            <div className="cc-footer-underline"></div>
+            <ul>
+              <li>Clean Water Initiative</li>
+              <li>Education for All</li>
+              <li>Healthcare Access</li>
+              <li>Emergency Relief</li>
+              <li>Sustainable Agriculture</li>
+              <li>Women's Empowerment</li>
+              <li>Volunteer Abroad</li>
+            </ul>
+          </div>
+          <div className="cc-footer-col">
+            <h3>Contact Us</h3>
+            <div className="cc-footer-underline"></div>
+            <ul>
+              <li>Hyderabad</li>
+              <li>91+ 9324562567</li>
+              <li>info@compassionconnect.org</li>
+              <li>Mon-Fri: 9:00 AM - 5:00 PM</li>
+            </ul>
+          </div>
+        </div>
+          <div className="cc-footer-divider"></div>
+  <div className="cc-footer-copyright">
+    © 2025 CompassionConnect. All Rights Reserved. | Privacy Policy | Terms of Service
+  </div>
+</footer>
+        
+    </>
   );
 };
 
