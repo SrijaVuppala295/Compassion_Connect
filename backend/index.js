@@ -4,10 +4,19 @@ const app = express();
 const port = process.env.PORT;
 const connect = require('./config/db');
 const authRoutes = require('./routes/auth');
+const cors = require('cors');
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //MongoDb Connection
 connect();
+
+
+//cors connection
+app.use(cors({
+  origin: 'http://localhost:5173', // or wherever your React app is running
+  credentials: true
+}));
 
 
 

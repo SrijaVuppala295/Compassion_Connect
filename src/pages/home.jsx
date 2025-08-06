@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import images from '../assets/images';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import eventsData from "../js/eventData";
+import { useAuth } from '../context/AuthContext';
 
 const CompassionConnect = () => {
+   const {logout,user,loading} = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
@@ -68,6 +70,19 @@ const CompassionConnect = () => {
     setIsMobileMenuOpen(false);
   };
 
+  //LogoutButton
+  const handleLogout = ()=>{
+    const p = prompt('Enter Yes if you want to logout') ;
+    if(p.toLowerCase()==="yes"){
+      logout();
+    }
+    else{
+      return;
+    }
+
+
+  }
+
   return (
     <div className="compassion-connect">
       {/* Header & Navbar */}
@@ -89,8 +104,18 @@ const CompassionConnect = () => {
               <li><a href="#events" onClick={() => scrollToSection('events')}>Events</a></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><a href="#blog" onClick={() => scrollToSection('blog')}>Blog</a></li>
+              {!user?<>
               <li><Link to="/signUp">SignUp</Link></li>
-              <li><a href="#logout">Logout</a></li>
+              <li><Link to="/login">Login</Link></li>
+
+
+              </>:<>
+              <li><button onClick={handleLogout} className=' !text-slate-600 cursor-pointer hover:text-gray-600'>Logout</button></li>
+
+                 
+              </>}
+              
+              
               <li><a href="#leaderboard">Leaderboard</a></li>
             </ul>
 
