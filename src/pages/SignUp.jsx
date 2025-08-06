@@ -2,11 +2,11 @@ import React from "react";
 import { useState } from "react";
 import axios from "../axios";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 
 const SignUp = () => {
-  const {login} = useAuth();
+  const { login } = useAuth();
   const [form, setform] = useState({
     name: "",
     email: "",
@@ -27,7 +27,7 @@ const SignUp = () => {
   };
   const handlePic = async (e) => {
     e.preventDefault();
-    
+
     const file = e.target.files[0];
     if (!file) {
       return;
@@ -38,7 +38,9 @@ const SignUp = () => {
     data.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
     try {
       const res = await fetch(
-        `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${
+          import.meta.env.VITE_CLOUD_NAME
+        }/image/upload`,
         { method: "POST", body: data }
       );
       const upload = await res.json();
@@ -47,20 +49,19 @@ const SignUp = () => {
     } catch (e) {
       console.log("Upload failed", e);
     } finally {
-       // Stop loader
+      // Stop loader
     }
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       if (!form.name || !form.email || !form.password || !form.role) {
         toast.error("Fill all the feilds");
         return;
       } else if (form.password !== form.confirmPassword) {
         toast.error("Confirm Password does not match Password");
-      }
-      else{
+      } else {
         setLoading(true);
 
         const res = await fetch("http://localhost:3000/api/auth/signup", {
@@ -85,122 +86,125 @@ const SignUp = () => {
             role: "",
             picture: "",
           });
+          login(data.user, data.token);
           setLoading(false);
-          login(data.user,data.token);
-          navigate("/");
+          setTimeout(() => {
+            navigate("/");
+          }, 1500);
         } else {
           toast.error("SignUp failed");
           console.log(data);
         }
       }
-
     } catch (e) {
       toast.error(`Error occured ${e}`);
       console.log(e);
     }
   };
   return (
-    <div className="min-h-screen sm:!min-w-screen bg-gradient-to-b from-yellow-300 to-yellow-50 flex items-center justify-center">
+    <div className="min-h-screen sm:!min-w-screen bg-gradient-to-b from-purple-800 to-yellow-200 flex justify-center items-center">
       <Toaster position="top-center" reverseOrder={false} />
-      <div className=" container !mx-auto !my-10 border !p-3 sm:!p-10 !shadow-lg shadow-black">
-        <form onSubmit={handleSubmit} className=" text-xl">
-          <h2 className="text-2xl text-center underline">Sign-Up Form</h2>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+      <div className=" container !mx-auto !my-10 border !p-3 sm:!p-20 !shadow-lg shadow-black">
+        <form onSubmit={handleSubmit} className=" text-xl text-white">
+          <h2 className="text-2xl text-center underline capitalize !my-3">Sign-Up Form</h2>
+          
+           
+              <label htmlFor="name" className="!font-bold text-xl text-black  ">
+                Enter Name <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your full name"
+                value={form.name}
+                onChange={handleChange}
+                className=" !w-full !my-3 !p-3 bg-white text-black rounded-b-lg  "
+              />
+            
+            
+              <label htmlFor="email" className="!font-bold text-xl text-black  ">Enter Email <span className="text-red-600">*</span></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                value={form.email}
+                onChange={handleChange}
+                className=" !w-full !my-3 !p-3 bg-white text-black rounded-b-lg "
+              />
+           
+          
 
-          <div className="flex  gap-4  !items-center !my-5 text-xl">
-            <label htmlFor="name" className=" ">Enter Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter your full name"
-              value={form.name}
-              onChange={handleChange}
-              className=" !block !max-w-full !p-1.5 bg-white text-black  border-2 focus:border-amber-400 "
-            />
-          </div>
-          <div className="flex gap-4  items-center !my-5 text-xl">
-            <label htmlFor="email">Enter Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              value={form.email}
-              onChange={handleChange}
-              className="!block !max-w-full !p-1.5 bg-white text-black  border-2 focus:border-amber-400 "
-            />
-          </div>
-          </div>
+          
+            
+              <label htmlFor="password" className="!font-bold text-xl text-black  ">Enter Password <span className="text-red-600">*</span></label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                value={form.password}
+                onChange={handleChange}
+                className=" !w-full !my-3 !p-3 bg-white text-black rounded-b-lg"
+              />
+            
+            
+              <label htmlFor="confirmPassword" className="!font-bold text-xl text-black  ">
+                Confirm Password <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder=" confirm password"
+                value={form.confirmPassword}
+                onChange={handleChange}
+                className=" !w-full !my-3 !p-3 bg-white text-black rounded-b-lg"
+              />
+            
+          
+          
+            
+              <label htmlFor="role" className="!font-bold text-xl text-black  ">Enter Your Role <span className="text-red-600">*</span></label>
+              <select
+                name="role"
+                id="role"
+                onChange={handleChange}
+                value={form.role}
+                className=" !w-full !my-3 !p-3 bg-white text-black rounded-b-lg"
+              >
+                Role
+                <option value="Doner">Doner</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Fundraiser">Fundraiser</option>
+                <option value="Admin">Admin</option>
+              </select>
+            
+            
+              <label htmlFor="picture" className="!font-bold text-xl text-black  ">Upload Picture <span className="text-red-600">*</span></label>
 
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
-
-          <div className="flex gap-4 !my-5 text-xl">
-            <label htmlFor="password">Enter Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Enter your password"
-              value={form.password}
-              onChange={handleChange}
-              className="!block !max-w-full !h-1/2 !p-1.5 sm:!p-2 bg-white text-black  border-2 focus:border-amber-400"
-            />
-          </div>
-          <div className="flex gap-2 !my-5 text-xl">
-            <label htmlFor="confirmPassword" className="block">
-               Confirm Password
-            </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-              placeholder=" confirm password"
-              value={form.confirmPassword}
-              onChange={handleChange}
-              className="!block !max-w-full !h-1/2 !p-1.5 bg-white text-black  border-2 focus:border-amber-400 "
-            />
-          </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
-
-          <div className="flex gap-4 !my-5 text-xl items-center">
-            <label htmlFor="role">Enter Your Role</label>
-            <select
-              name="role"
-              id="role"
-              onChange={handleChange}
-              value={form.role}
-              className="bg-white !p-1.5"
-            >
-              Role
-              <option value="Doner">Doner</option>
-              <option value="Volunteer">Volunteer</option>
-              <option value="Fundraiser">Fundraiser</option>
-              <option value="Admin">Admin</option>
-            </select>
-          </div>
-          <div className="flex gap-4 my-5 text-xl items-center">
-            <label htmlFor="picture">Upload Picture:</label>
-
-            <input
-              type="file"
-              name="picture"
-              id="picture"
-              accept="image/*"
-              disabled={picLoad}
-              onChange={handlePic}
-              className="bg-white !max-w-1/2 !h-1/2 text-black !p-1.5 border-2 focus:border-amber-400 align-center"
-            />
-          </div>
-          </div>
+              <input
+                type="file"
+                name="picture"
+                id="picture"
+                accept="image/*"
+                disabled={picLoad}
+                onChange={handlePic}
+                className=" !w-full !my-3 !p-3 bg-white text-black rounded-b-lg"
+              />
+            
+          
           <button
             type="submit"
             disabled={loading}
-            className="!block !mx-auto !p-3 !my-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer transition-all duration-150"
+            className="!w-full font-bold !p-3 !my-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer transition-all duration-150"
           >
             {loading ? "Signing Up..." : "Sign Up"}
           </button>
+          <div className="flex justify-center items-center text-xl text-black">
+           <p> Already Registered ? <span className='font-bold text-slate-600 '><Link className='hover:!scale-105 hover:!underline' to="/login">Login</Link></span></p> 
+          </div>
         </form>
       </div>
     </div>

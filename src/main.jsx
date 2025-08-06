@@ -9,6 +9,7 @@ import Event from './pages//event.jsx';
 import Feedback from './pages/feedback.jsx';
 import VolunteerRegistration from './pages/volunteer.jsx';
 import SignUp from './pages/signUp.jsx';
+import Login from './pages/login.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/volunteer" element={<VolunteerRegistration />} />
         <Route path='/signUp' element={<SignUp/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </Router>
     </AuthProvider>

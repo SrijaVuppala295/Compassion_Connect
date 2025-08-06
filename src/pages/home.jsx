@@ -14,6 +14,7 @@ const CompassionConnect = () => {
   const [email, setEmail] = useState('');
 
   const totalPages = 2;
+  
 
   // Handle scroll for sticky header
   useEffect(() => {
@@ -82,6 +83,7 @@ const CompassionConnect = () => {
 
 
   }
+  if (loading) return null; 
 
   return (
     <div className="compassion-connect">
@@ -110,7 +112,7 @@ const CompassionConnect = () => {
 
 
               </>:<>
-              <li><button onClick={handleLogout} className=' !text-slate-600 cursor-pointer hover:text-gray-600'>Logout</button></li>
+              <li><button onClick={handleLogout} className=' !text-gray-600 cursor-pointer hover:text-gray-600'>Logout</button></li>
 
                  
               </>}
