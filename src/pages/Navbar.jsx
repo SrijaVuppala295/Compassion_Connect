@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import images from "../assets/images";
 import '../styles/home.css';
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
+  
   return (
     <header className="header">
       <div className="container">
