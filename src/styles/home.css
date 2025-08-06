@@ -1,3 +1,144 @@
+.dark-mode .events {
+  background-color: #222 !important;
+}
+.dark-mode .event-card {
+  background-color: #181818 !important;
+  color: #FFD700 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+.dark-mode .event-content h3 {
+  color: #FFD700 !important;
+}
+.dark-mode .event-content p {
+  color: #f5f5f5 !important;
+}
+.dark-mode .event-header img {
+  filter: brightness(0.8) contrast(1.1);
+}
+.dark-mode .event-date {
+  background: #FFD700 !important;
+  color: #222 !important;
+}
+.dark-mode .impact-story {
+  background-color: #222 !important;
+}
+.dark-mode .impact-wrapper {
+  background: transparent !important;
+}
+.dark-mode .impact-content h2 {
+  color: #FFD700 !important;
+}
+.dark-mode .impact-content p {
+  color: #f5f5f5 !important;
+}
+.dark-mode .impact-quote {
+  background: #181818 !important;
+  color: #FFD700 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+.dark-mode .impact-image img {
+  filter: brightness(0.8) contrast(1.1);
+}
+.dark-mode .about {
+  background-color: #222 !important;
+}
+.dark-mode .about-card {
+  background-color: #181818 !important;
+  color: #FFD700 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+.dark-mode .about-content h3 {
+  color: #FFD700 !important;
+}
+.dark-mode .about-content p {
+  color: #f5f5f5 !important;
+}
+.dark-mode .about-img img {
+  filter: brightness(0.8) contrast(1.1);
+}
+.dark-mode .section-heading h2 {
+  color: #FFD700 !important;
+}
+.dark-mode .section-heading p {
+  color: #f5f5f5 !important;
+}
+/* Dark mode styles for CompassionConnect */
+.dark-mode {
+  background: #181818 !important;
+  color: #f5f5f5 !important;
+}
+.dark-mode .header,
+.dark-mode .navbar,
+.dark-mode .footer {
+  background: #222 !important;
+  color: #f5f5f5 !important;
+}
+.dark-mode .container {
+  background: transparent !important;
+  color: #f5f5f5 !important;
+}
+.dark-mode .btn,
+.dark-mode .btn-primary {
+  background: #FFD700 !important;
+  color: #222 !important;
+  border: none !important;
+}
+.dark-mode .btn-outline {
+  border-color: #FFD700 !important;
+  color: #FFD700 !important;
+  background: transparent !important;
+}
+.dark-mode .section-heading h2,
+.dark-mode .section-heading p {
+  color: #FFD700 !important;
+}
+.dark-mode .about-card,
+.dark-mode .cause-card,
+.dark-mode .story-card,
+.dark-mode .event-card,
+.dark-mode .blog-card {
+  background: #222 !important;
+  color: #f5f5f5 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.dark-mode .progress-bar {
+  background: #333 !important;
+}
+.dark-mode .progress {
+  background: #FFD700 !important;
+}
+.dark-mode .newsletter-input {
+  background: #222 !important;
+  color: #FFD700 !important;
+  border: 1px solid #FFD700 !important;
+}
+.dark-mode .newsletter-button {
+  background: #FFD700 !important;
+  color: #222 !important;
+}
+.dark-mode .impact-quote {
+  color: #FFD700 !important;
+}
+.dark-mode .logo-text span {
+  color: #FFD700 !important;
+}
+.dark-mode .event-date,
+.dark-mode .cause-category {
+  background: #FFD700 !important;
+  color: #222 !important;
+}
+.dark-mode .footer-links a {
+  color: #FFD700 !important;
+}
+.dark-mode .footer-contact span {
+  color: #FFD700 !important;
+}
+.dark-mode .carousel-indicators .indicator.active {
+  background: #FFD700 !important;
+}
+.dark-mode .carousel-indicators .indicator {
+  background: #333 !important;
+}
 
         /* Logo Styles */
 .logo {
@@ -112,7 +253,7 @@
         
         .btn-outline {
             background-color: transparent;
-            color: white;
+            color: rgb(255, 255, 255);
             border: 2px solid white;
         }
         

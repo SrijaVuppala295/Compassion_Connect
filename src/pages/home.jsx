@@ -10,6 +10,7 @@ const CompassionConnect = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [email, setEmail] = useState('');
+  const [darkMode, setDarkMode] = useState(false);
 
   const totalPages = 2;
 
@@ -69,7 +70,7 @@ const CompassionConnect = () => {
   };
 
   return (
-    <div className="compassion-connect">
+    <div className={`compassion-connect${darkMode ? ' dark-mode' : ''}`}> 
       {/* Header & Navbar */}
       <header className={`header ${isSticky ? 'sticky' : ''}`}>
         <div className="container">
@@ -77,12 +78,12 @@ const CompassionConnect = () => {
             <a href="/" className="logo">
               <img src={images.logo1} alt="CompassionConnect Logo" className="logo-img" />
               <div className="logo-text">
-                <span style={{ color: '#1D2635' }}>Compassion</span>{' '}
-                <span style={{ color: '#B68E56' }}>Connect</span>
+                <span style={{ color: darkMode ? '#ffffff' : '#1D2635' }}>Compassion</span>{' '}
+                <span style={{ color: darkMode ? '#FFD700' : '#B68E56' }}>Connect</span>
               </div>
             </a>
 
-            <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+            <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}> 
               <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
               <li><a href="#about" onClick={() => scrollToSection('about')}>About Us</a></li>
               <li><a href="#causes" onClick={() => scrollToSection('causes')}>Causes</a></li>
@@ -92,6 +93,25 @@ const CompassionConnect = () => {
               <li><a href="#logout">Logout</a></li>
               <li><a href="#leaderboard">Leaderboard</a></li>
             </ul>
+
+            <button
+              className="dark-mode-toggle"
+              style={{
+                marginLeft: '1rem',
+                background: darkMode ? '#222' : '#eee',
+                color: darkMode ? '#FFD700' : '#333',
+                border: 'none',
+                borderRadius: '20px',
+                padding: '0.5rem 1rem',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                transition: 'background 0.3s, color 0.3s',
+              }}
+              onClick={() => setDarkMode(!darkMode)}
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? '🌙 Dark' : '☀️ Light'}
+            </button>
 
             <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
               <span className="bar"></span>
@@ -558,3 +578,4 @@ const CompassionConnect = () => {
 };
 
 export default CompassionConnect;
+// ...existing code...
