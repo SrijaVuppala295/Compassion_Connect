@@ -1,25 +1,57 @@
-name: Frontend Issue
+name: 🎨 Frontend Issue
+description: This template is for reporting issues related to the frontend such as UI bugs, component issues, or styling problems.
+title: "[FRONTEND ISSUE] "
+labels: [frontend, bug]
 
-description: |
-  This template is for reporting issues related to the frontend such as UI bugs, component issues, or styling problems.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide as much detail as possible to help us diagnose frontend issues.
 
-fields:
-  - name: Description
-    type: markdown
-    description: A brief description of the issue you're experiencing.
-  
-  - name: Steps to Reproduce
-    type: list
-    description: Provide steps to reproduce the issue.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the issue you're experiencing.
+      placeholder: "E.g., The submit button is not clickable on mobile devices."
+    validations:
+      required: true
 
-  - name: Expected Behavior
-    type: markdown
-    description: What should happen?
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide steps to reproduce the issue.
+      placeholder: |
+        1. Open the homepage on a mobile device.
+        2. Scroll to the form.
+        3. Try to click the submit button.
+    validations:
+      required: true
 
-  - name: Actual Behavior
-    type: markdown
-    description: What happens instead?
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+      placeholder: "The submit button should trigger form submission."
+    validations:
+      required: true
 
-  - name: Screenshots or Logs
-    type: file
-    description: Attach any relevant screenshots or error logs.
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What happens instead?
+      placeholder: "Nothing happens when clicking the submit button."
+    validations:
+      required: true
+
+  - type: attachments
+    id: screenshots_or_logs
+    attributes:
+      label: Screenshots or Logs
+      description: Attach any relevant screenshots or error logs.
+    validations:
+      required: false
