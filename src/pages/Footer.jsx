@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/Footer.css";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 const Footer = ({ scrollToSection }) => {
   const go = (e, id) => {
-    if (!scrollToSection) return; // on Contact page we'll just let anchors work as-is
+    if (!scrollToSection) return; 
     e.preventDefault();
     scrollToSection(id);
   };
