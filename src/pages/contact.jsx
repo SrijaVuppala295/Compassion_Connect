@@ -1,5 +1,6 @@
+import Footer from "./Footer";
 import React, { useState, useEffect } from "react";
-import contactImg from "../assets/images/brand communication-pana.png"; 
+import contactImg from "../assets/images/contact-banner.png"; 
 import "../styles/contact.css";
 
 const Contact = () => {
@@ -100,66 +101,8 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="cc-footer">
-        <div className="cc-footer-main">
-          <div className="cc-footer-col">
-            <h3>About Us</h3>
-            <div className="cc-footer-underline"></div>
-            <p>
-              CompassionConnect is a global<br></br>
-               nonprofit organization dedicated to <br></br>empowering communities and <br></br>changing lives through sustainable<br></br> development, education, and<br></br> humanitarian aid.
-            </p>
-            <div className="cc-footer-social">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#"><i className="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div className="cc-footer-col">
-            <h3>Quick Links</h3>
-            <div className="cc-footer-underline"></div>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/#about">About Us</a></li>
-              <li><a href="/#events">Events</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/feedback">Feedback</a></li>
-              <li><a href="/volunteer">Become a Volunteer</a></li>
-            </ul>
-          </div>
-          <div className="cc-footer-col">
-            <h3>Our Programs</h3>
-            <div className="cc-footer-underline"></div>
-            <ul>
-              <li>Clean Water Initiative</li>
-              <li>Education for All</li>
-              <li>Healthcare Access</li>
-              <li>Emergency Relief</li>
-              <li>Sustainable Agriculture</li>
-              <li>Women's Empowerment</li>
-              <li>Volunteer Abroad</li>
-            </ul>
-          </div>
-          <div className="cc-footer-col">
-            <h3>Contact Us</h3>
-            <div className="cc-footer-underline"></div>
-            <ul>
-              <li>Hyderabad</li>
-              <li>91+ 9324562567</li>
-              <li>info@compassionconnect.org</li>
-              <li>Mon-Fri: 9:00 AM - 5:00 PM</li>
-            </ul>
-          </div>
-        </div>
-          <div className="cc-footer-divider"></div>
-  <div className="cc-footer-copyright">
-    © 2025 CompassionConnect. All Rights Reserved. | Privacy Policy | Terms of Service
-  </div>
-</footer>
-        
+     
+        <Footer />
     </>
   );
 };
