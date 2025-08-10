@@ -1,4 +1,4 @@
-name: Backend Issue
+name: 🛠️ Backend Issue
 description: Use this template to report any issues related to the backend such as API errors, server issues, or bugs.
 title: "[BACKEND ISSUE] "
 labels: [backend, bug]
