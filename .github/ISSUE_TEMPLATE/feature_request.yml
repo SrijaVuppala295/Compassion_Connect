@@ -10,6 +10,7 @@ body:
       label: Feature Title
       description: A short and descriptive title for the feature.
       placeholder: "E.g., Add dark mode support"
+    validations:
       required: true
 
   - type: textarea
@@ -42,7 +43,7 @@ body:
     validations:
       required: true
 
-  - type: select
+  - type: dropdown
     id: priority
     attributes:
       label: Priority (Optional)
