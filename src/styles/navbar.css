@@ -1,0 +1,21 @@
+/* Navbar-specific styles */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* keep the logo link unstyled */
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.logo-text .brand-primary,
+.logo-text .brand-accent {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.logo-text .brand-primary { color: #1D2635; }
+.logo-text .brand-accent  { color: #B68E56; }

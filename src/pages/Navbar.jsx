@@ -1,46 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import images from "../assets/images";
-import "../styles/home.css";
+import "../styles/home.css";      // keep if header/navbar layout lives here
+import "../styles/navbar.css";    // new: navbar-specific styles
 
 const Navbar = () => {
   return (
     <header className="header">
       <div className="container">
         <nav className="navbar">
-          <Link
-            to="/"
-            className="logo"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <img
-              src={images.logo1}
-              alt="Logo"
-              style={{ width: 70, height: 70, marginRight: 10 }}
-            />
+          <Link to="/" className="logo">
+            <img src={images.logo1} alt="Logo" className="logo-img" />
             <div className="logo-text">
-              <span
-                style={{
-                  color: "#1D2635",
-                  fontSize: "1.8rem",
-                  fontWeight: 700,
-                }}
-              >
-                Compassion
-              </span>
-              <span
-                style={{
-                  color: "#B68E56",
-                  fontSize: "1.8rem",
-                  fontWeight: 700,
-                }}
-              >
-                Connect
-              </span>
+              <span className="brand-primary">Compassion</span>
+              <span className="brand-accent">Connect</span>
             </div>
           </Link>
 
