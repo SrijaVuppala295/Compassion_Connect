@@ -108,7 +108,7 @@ const CompassionConnect = () => {
         <div className="container" style={{ marginTop: '50px' }}>
           <div className="hero-content">
             <div className="hero-buttons">
-              <a href="#payment" className="btn btn-secondary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               <a href="#causes" className="btn btn-outline" onClick={() => scrollToSection('causes')}>Explore Our Work</a>
             </div>
           </div>
@@ -186,7 +186,7 @@ const CompassionConnect = () => {
                     <span className="goal">Goal: ₹500,000</span>
                   </div>
                 </div>
-                <a href="#payment" className="btn btn-primary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               </div>
             </div>
 
@@ -207,7 +207,7 @@ const CompassionConnect = () => {
                     <span className="goal">Goal: ₹400,000</span>
                   </div>
                 </div>
-                <a href="#payment" className="btn btn-primary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               </div>
             </div>
 
@@ -228,7 +228,7 @@ const CompassionConnect = () => {
                     <span className="goal">Goal: ₹500,000</span>
                   </div>
                 </div>
-                <a href="#payment" className="btn btn-primary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               </div>
             </div>
           </div>
