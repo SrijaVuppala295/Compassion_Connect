@@ -1,0 +1,29 @@
+name: Feature Request
+
+description: |
+  Use this template to suggest new features or enhancements for the project.
+
+fields:
+  - name: **Feature Title**
+    type: string
+    required: true
+    description: A short and descriptive title for the feature.
+
+  - name: **Description**
+    type: markdown
+    required: true
+    description: A detailed description of the feature and why it's useful.
+
+  - name: **Use Case**
+    type: markdown
+    required: true
+    description: How would this feature be used in the context of the project?
+
+  - name: **Expected Outcome**
+    type: markdown
+    required: true
+    description: What is the desired outcome of implementing this feature?
+
+  - name: **Priority (Optional)**
+    type: string
+    description: Choose the priority level for this feature request (e.g., Low, Medium, High).
