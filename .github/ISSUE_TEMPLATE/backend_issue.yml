@@ -1,0 +1,32 @@
+name: Backend Issue
+
+description: |
+  Use this template to report any issues related to the backend such as API errors, server issues, or bugs.
+
+fields:
+  - name: **Description**
+    type: markdown
+    required: true
+    description: A clear and concise description of the issue.
+
+  - name: **Steps to Reproduce**
+    type: list
+    required: true
+    description: Provide the exact steps to reproduce the issue.
+
+  - name: **Error Message/Logs**
+    type: code
+    required: true
+    description: Include any error messages or logs from the backend.
+
+  - name: **Expected Behavior**
+    type: markdown
+    required: true
+    description: What did you expect to happen?
+
+  - name: **Environment (Optional)**
+    type: table
+    description: |
+      | Node.js Version | Express Version | Database |
+      | --------------- | --------------- | -------- |
+      | [Version]       | [Version]       | [Type]   |
