@@ -1,0 +1,61 @@
+name: 🐛 Bug Report
+description: Use this template to report bugs or issues with the application.
+title: "[BUG] "
+labels: [bug]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the information below to help us understand and fix the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+      placeholder: e.g. When I try to save the form, the app crashes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps needed to reproduce the bug.
+      placeholder: |
+        1. Go to the dashboard
+        2. Click on 'Save'
+        3. Observe the crash
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: The form should be saved and the user redirected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: The app crashes with a 500 error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: Error Message / Logs
+      description: Include any error messages, stack traces, or relevant logs.
+      render: shell
+      placeholder: |
+        Error: Cannot read property 'x' of undefined
+            at handleSubmit (App.js:52)
+    validations:
+      required: false
