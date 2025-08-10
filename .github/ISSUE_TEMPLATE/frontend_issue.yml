@@ -1,0 +1,25 @@
+name: Frontend Issue
+
+description: |
+  This template is for reporting issues related to the frontend such as UI bugs, component issues, or styling problems.
+
+fields:
+  - name: Description
+    type: markdown
+    description: A brief description of the issue you're experiencing.
+  
+  - name: Steps to Reproduce
+    type: list
+    description: Provide steps to reproduce the issue.
+
+  - name: Expected Behavior
+    type: markdown
+    description: What should happen?
+
+  - name: Actual Behavior
+    type: markdown
+    description: What happens instead?
+
+  - name: Screenshots or Logs
+    type: file
+    description: Attach any relevant screenshots or error logs.
