@@ -1,0 +1,128 @@
+/* ======================= */
+/* CompassionConnect Footer */
+/* ======================= */
+
+.cc-footer {
+  background: #324253;
+  color: #fff;
+  padding: 0 0 40px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cc-footer-main {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 60px 40px 40px 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cc-footer-col {
+  flex: 1 1 250px;
+  min-width: 230px;
+  margin: 0 16px;
+}
+
+.cc-footer-col h3 {
+  font-size: 1.45rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.cc-footer-underline {
+  width: 45px;
+  height: 3px;
+  background: #ff9911;
+  margin-bottom: 16px;
+}
+
+.cc-footer-col p,
+.cc-footer-col ul,
+.cc-footer-col li {
+  color: #c0cad6;
+  font-size: 1.07rem;
+  margin-bottom: 10px;
+  line-height: 1.7;
+  list-style: none;
+  padding: 0;
+}
+
+.cc-footer-col ul {
+  margin: 0;
+  padding: 0;
+}
+
+.cc-footer-col li a {
+  color: #c0cad6;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.cc-footer-col li a:hover {
+  color: #ff9911;
+  text-decoration: underline;
+}
+
+.cc-footer-social {
+  margin-top: 18px;
+  display: flex;
+  gap: 24px;
+}
+
+.cc-footer-social .social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #465465;
+  color: #fff;
+  font-size: 1.7rem;
+  transition: background 0.2s, transform 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.cc-footer-social .social-btn:hover {
+  background: #ff9911;
+  color: #fff;
+  transform: scale(1.09);
+}
+
+.cc-footer-social a {
+  display: inline-block;
+  margin-right: 16px;
+  color: #bfcadd;
+  font-size: 1.6rem;
+  transition: color 0.16s, transform 0.16s;
+}
+
+.cc-footer-social a:hover {
+  color: #ff9911;
+  transform: scale(1.13);
+}
+
+.cc-footer-copyright {
+  color: #dde6f1;
+  text-align: center;
+  margin-top: 36px;
+  font-size: 1.08rem;
+  padding-bottom: 6px;
+}
+
+.cc-footer-divider {
+  width: 100%;
+  height: 1.5px;
+  background: #4b5b6d;
+  margin: 0 auto 20px auto;
+  opacity: 0.32;
+  max-width: 1400px;
+}
+
+@media (max-width: 900px) {
+  .cc-footer-main { flex-direction: column; align-items: flex-start; }
+  .cc-footer-col { margin-bottom: 24px; }
+}

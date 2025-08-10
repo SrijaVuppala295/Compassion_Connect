@@ -21,7 +21,7 @@ import edu from './edu.webp';
 
 // png
 import bhim from './bhim.png';
-import brandCommunication from './brand communication-pana.png';
+import brandCommunication from './contact-banner.png';
 import favicon16 from './favicon-16x16.png';
 import favicon32 from './favicon-32x32.png';
 import favicon96 from './favicon-96x96.png';
