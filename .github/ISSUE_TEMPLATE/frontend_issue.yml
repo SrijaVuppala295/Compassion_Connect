@@ -1,5 +1,5 @@
 name: 🎨 Frontend Issue
-description: This template is for reporting issues related to the frontend such as UI bugs, component issues, or styling problems.
+description: This template is for reporting frontend bugs like UI, styling, or component issues.
 title: "[FRONTEND ISSUE] "
 labels: [frontend, bug]
 
@@ -48,8 +48,9 @@ body:
     validations:
       required: true
 
-  - type: attachments
-    id: screenshots_or_logs
+  - type: textarea
+    id: screenshots_or_logs_links
     attributes:
-      label: Screenshots or Logs
-      description: Attach any relevant screenshots or error logs.
+      label: Screenshots or Logs (links)
+      description: Paste links to screenshots or error logs if available.
+      placeholder: "e.g. https://imgur.com/your-screenshot"
