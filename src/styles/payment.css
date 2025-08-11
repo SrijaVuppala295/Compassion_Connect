@@ -1,384 +1,158 @@
-
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #f39c12;
-    --dark-color: #2c3e50;
-    --light-color: #ecf0f1;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    --border-radius: 10px;
+/* ---------- General Page Styling ---------- */
+.payment-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 90px; /* space for navbar */
+  background-color: #ffffff;
+  color: #1d2635;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
+/* ---------- Hero Section ---------- */
+.payment-hero {
+  background: linear-gradient(to right, #007BFF, #00AEEF);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+  border-radius: 0 0 30px 30px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.payment-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  animation: slideDown 0.8s ease-out;
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 40px 20px;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
+.payment-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+/* Slide-down animation */
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-.header h1 {
-    color: var(--dark-color);
-    margin-bottom: 10px;
-    font-size: 2.5rem;
+/* ---------- Form & Summary Section ---------- */
+.payment-form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
 }
 
-.header p {
-    color: #7f8c8d;
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 20px;
+.form-card, .summary-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
 }
 
-.goal-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: 600;
+.form-card:hover, .summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 123, 255, 0.3);
 }
 
-.progress-container {
-    background-color: #e0e0e0;
-    border-radius: 20px;
-    margin: 20px auto 40px;
-    max-width: 800px;
-    height: 24px;
-    position: relative;
-    overflow: hidden;
+/* Form Inputs */
+.payment-form input, 
+.payment-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 20px;
-    width: 65%;
-    transition: width 0.5s ease;
+.payment-form input:focus,
+.payment-form select:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
 }
 
-.trusticons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 30px auto;
+/* Radio Buttons */
+.frequency-options {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
 }
 
-.trusticon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.frequency-options input {
+  accent-color: #007BFF;
 }
 
-.trusticon span {
-    font-size: 2.5rem;
-    color: var(--dark-color);
+/* Button Styling */
+.btn-primary {
+  background: linear-gradient(to right, #007BFF, #00AEEF);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
 }
 
-.trusticon p {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #666;
+.btn-primary:hover {
+  background: linear-gradient(to right, #0056b3, #0088cc);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,123,255,0.4);
 }
 
-.impact-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 40px auto;
-    justify-content: center;
+/* ---------- Impact Section ---------- */
+.impact-section {
+  padding: 40px 20px;
+  background: #f0f8ff;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.impact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.impact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .impact-card {
-    flex: 1;
-    min-width: 260px;
-    max-width: 280px;
-    background: white;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .impact-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.impact-card .icon {
-    width: 100%;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--light-color);
-    font-size: 3rem;
-    color: var(--dark-color);
-}
 
-.impact-card h3 {
-    padding: 15px 20px 5px;
-    color: var(--dark-color);
-    font-size: 1.2rem;
-}
-
-.impact-card p {
-    padding: 0 20px 20px;
-    color: #666;
-}
-
-.donation-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.donation-form, .donation-summary {
-    flex: 1;
-    min-width: 320px;
-    background: white;
-    padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
-
-.donation-options {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.donation-option {
-    flex: 1;
-    min-width: 80px;
-    padding: 15px 10px;
-    text-align: center;
-    border: 2px solid #e0e0e0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-}
-
-.donation-option:hover, .donation-option.selected {
-    color: white;
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.form-group input, .form-group select, .custom-amount {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 30px;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.form-group input:focus, .form-group select:focus, .custom-amount:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-.card-details {
-    display: flex;
-    gap: 15px;
-}
-
-.card-details > div {
-    flex: 1;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 16px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 14px rgba(46, 204, 113, 0.3);
-}
-
-.summary-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.summary-total {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 2px solid var(--secondary-color);
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--dark-color);
-}
-
-.donation-impact {
-    margin-top: 30px;
-    background-color: rgba(52, 152, 219, 0.1);
-    padding: 20px;
-    border-radius: var(--border-radius);
-}
-
-.donation-impact h3 {
-    margin-bottom: 15px;
-    color: var(--dark-color);
-}
-
-.impact-list {
-    list-style-type: none;
-}
-
-.impact-list li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.impact-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-    font-weight: bold;
-}
-
-.thank-you {
-    display: none;
-    text-align: center;
-    padding: 50px;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    margin: 40px auto;
-    max-width: 800px;
-}
-
-.thank-you h2 {
-    color: var(--secondary-color);
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.thank-you p {
-    margin-bottom: 15px;
-    color: #666;
-}
-
-.testimonials {
-    background-color: white;
-    padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    margin: 40px auto;
-}
-
-.testimonials h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--dark-color);
-}
-
-.testimonial-slider {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.testimonial {
-    padding: 0 40px;
-}
-
-.testimonial-text {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: var(--dark-color);
-}
-
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: #666;
-    background-color: white;
-    margin-top: 40px;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-}
-
-@media (max-width: 768px) {
-    .card-details {
-        flex-direction: column;
-    }
-
-    .impact-card {
-        max-width: 100%;
-    }
-}
