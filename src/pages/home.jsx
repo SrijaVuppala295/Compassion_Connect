@@ -1,10 +1,11 @@
+import Footer from './Footer';
 import React, { useState, useEffect } from 'react';
 import '../styles/home.css';
 import { Link } from 'react-router-dom';
 import images from '../assets/images';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import eventsData from "../js/eventData";
 import { useAuth } from '../context/AuthContext';
+
 
 const CompassionConnect = () => {
    const {logout,user,loading} = useAuth();
@@ -135,7 +136,7 @@ const CompassionConnect = () => {
         <div className="container" style={{ marginTop: '50px' }}>
           <div className="hero-content">
             <div className="hero-buttons">
-              <a href="#payment" className="btn btn-secondary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               <a href="#causes" className="btn btn-outline" onClick={() => scrollToSection('causes')}>Explore Our Work</a>
             </div>
           </div>
@@ -213,7 +214,7 @@ const CompassionConnect = () => {
                     <span className="goal">Goal: ₹500,000</span>
                   </div>
                 </div>
-                <a href="#payment" className="btn btn-primary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               </div>
             </div>
 
@@ -234,7 +235,7 @@ const CompassionConnect = () => {
                     <span className="goal">Goal: ₹400,000</span>
                   </div>
                 </div>
-                <a href="#payment" className="btn btn-primary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               </div>
             </div>
 
@@ -255,7 +256,7 @@ const CompassionConnect = () => {
                     <span className="goal">Goal: ₹500,000</span>
                   </div>
                 </div>
-                <a href="#payment" className="btn btn-primary">Donate Now</a>
+<Link to="/payment" className="btn btn-secondary">Donate Now</Link>
               </div>
             </div>
           </div>
@@ -479,108 +480,8 @@ const CompassionConnect = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="footer" id="contact">
-        <div className="container">
-          <div className="footer-wrapper">
-            <div className="footer-widget">
-              <h3>About Us</h3>
-              <p>CompassionConnect is a global nonprofit organization dedicated to empowering communities and changing lives through sustainable development, education, and humanitarian aid.</p>
-                <div className="social-links">
-  <a
-    href="https://www.facebook.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-  >
-    <FaFacebook />
-  </a>
-  <a
-    href="https://x.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Twitter (X)"
-  >
-    <FaTwitter />
-  </a>
-  <a
-    href="https://www.instagram.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-  >
-    <FaInstagram />
-  </a>
-  <a
-    href="https://www.linkedin.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <FaLinkedinIn />
-  </a>
-  <a
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="YouTube"
-  >
-    <FaYoutube />
-  </a>
-              </div>
-            </div>
+      <Footer scrollToSection={scrollToSection} />
 
-            <div className="footer-widget">
-              <h3>Quick Links</h3>
-              <ul className="footer-links">
-                <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-                <li><a href="#about" onClick={() => scrollToSection('about')}>About Us</a></li>
-                <li><a href="#events" onClick={() => scrollToSection('events')}>Events</a></li>
-                 <li><Link to="/contact">Contact</Link></li>
-               <li><Link to="/feedback">Feedback</Link></li>
-                <li><Link to="/volunteer">Become a Volunteer</Link></li>
-              </ul>
-            </div>
-
-            <div className="footer-widget">
-              <h3>Our Programs</h3>
-              <ul className="footer-links">
-                <li><a href="#clean-water">Clean Water Initiative</a></li>
-                <li><a href="#education">Education for All</a></li>
-                <li><a href="#healthcare">Healthcare Access</a></li>
-                <li><a href="#emergency">Emergency Relief</a></li>
-                <li><a href="#agriculture">Sustainable Agriculture</a></li>
-                <li><a href="#empowerment">Women's Empowerment</a></li>
-                <li><a href="#volunteer-abroad">Volunteer Abroad</a></li>
-              </ul>
-            </div>
-
-            <div className="footer-widget">
-              <h3>Contact Us</h3>
-              <div className="footer-contact">
-                <i className="fas fa-map-marker-alt"></i>
-                <span>Hyderabad</span>
-              </div>
-              <div className="footer-contact">
-                <i className="fas fa-phone-alt"></i>
-                <span>91+ 9324562567</span>
-              </div>
-              <div className="footer-contact">
-                <i className="fas fa-envelope"></i>
-                <span>info@compassionconnect.org</span>
-              </div>
-              <div className="footer-contact">
-                <i className="fas fa-clock"></i>
-                <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>&copy; 2025 CompassionConnect. All Rights Reserved. | Privacy Policy | Terms of Service</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

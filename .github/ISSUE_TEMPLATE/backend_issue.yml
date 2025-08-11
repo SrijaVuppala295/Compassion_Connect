@@ -1,0 +1,61 @@
+name: 🛠️ Backend Issue
+description: Use this template to report any issues related to the backend such as API errors, server issues, or bugs.
+title: "[BACKEND ISSUE] "
+labels: [backend, bug]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide detailed information to help us diagnose and fix backend issues.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the issue.
+      placeholder: "The API returns a 500 error when fetching user data."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the exact steps to reproduce the issue.
+      placeholder: |
+        1. Send a GET request to `/api/users/123`
+        2. Observe the server error response
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_logs
+    attributes:
+      label: Error Message / Logs
+      description: Include any error messages or logs from the backend.
+      render: shell
+      placeholder: |
+        Error: Connection timeout
+        at Server.js:45
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "The API should return the user data with status 200."
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (Optional)
+      description: Provide versions and environment details like Node.js, Express, database, etc.
+      placeholder: |
+        Node.js Version: 18.15.0
+        Express Version: 4.18.2
+        Database: MongoDB 6.0

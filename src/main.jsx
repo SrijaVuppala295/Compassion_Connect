@@ -11,12 +11,16 @@ import VolunteerRegistration from './pages/volunteer.jsx';
 import SignUp from './pages/signUp.jsx';
 import Login from './pages/login.jsx';
 
+import Navbar from './pages/Navbar.jsx'; 
+import Payment from "./pages/Payment.jsx";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/event/:id" element={<Event />} />
         <Route path="/feedback" element={<Feedback />} />

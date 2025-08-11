@@ -1,0 +1,56 @@
+name: 🎨 Frontend Issue
+description: This template is for reporting frontend bugs like UI, styling, or component issues.
+title: "[FRONTEND ISSUE] "
+labels: [frontend, bug]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide detailed information about the frontend issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the issue you're experiencing.
+      placeholder: "E.g., The submit button is not clickable on mobile devices."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide steps to reproduce the issue.
+      placeholder: |
+        1. Open the homepage on a mobile device.
+        2. Scroll to the form.
+        3. Try to click the submit button.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+      placeholder: "The submit button should trigger form submission."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What happens instead?
+      placeholder: "Nothing happens when clicking the submit button."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots_or_logs_links
+    attributes:
+      label: Screenshots or Logs (links)
+      description: Paste links to screenshots or error logs if available.
+      placeholder: "e.g. https://imgur.com/your-screenshot"
