@@ -28,7 +28,7 @@ Let's build something amazing together! 💖
 We collaborate, discuss ideas, and help contributors on our official **Discord server**.  
 Click the button below to join us and be part of **Compassion Connect – GSSoC 2025**! 🎉
 
-[![Join Discord](https://img.shields.io/badge/Join%20Us%20on-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/VUXCEY9M)
+[![Join Discord](https://img.shields.io/badge/Join%20Us%20on-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/96XJHmQg)
 
 
 # 🌍 Compassion-Connect
