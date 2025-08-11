@@ -4,15 +4,18 @@ import '../styles/home.css';
 import { Link } from 'react-router-dom';
 import images from '../assets/images';
 import eventsData from "../js/eventData";
+import { useAuth } from '../context/AuthContext';
 
 
 const CompassionConnect = () => {
+   const {logout,user,loading} = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [email, setEmail] = useState('');
 
   const totalPages = 2;
+  
 
   // Handle scroll for sticky header
   useEffect(() => {
@@ -69,6 +72,20 @@ const CompassionConnect = () => {
     setIsMobileMenuOpen(false);
   };
 
+  //LogoutButton
+  const handleLogout = ()=>{
+    const p = prompt('Enter Yes if you want to logout') ;
+    if(p.toLowerCase()==="yes"){
+      logout();
+    }
+    else{
+      return;
+    }
+
+
+  }
+  if (loading) return null; 
+
   return (
     <div className="compassion-connect">
       {/* Header & Navbar */}
@@ -90,7 +107,18 @@ const CompassionConnect = () => {
               <li><a href="#events" onClick={() => scrollToSection('events')}>Events</a></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><a href="#blog" onClick={() => scrollToSection('blog')}>Blog</a></li>
-              <li><a href="#logout">Logout</a></li>
+              {!user?<>
+              <li><Link to="/signUp">SignUp</Link></li>
+              <li><Link to="/login">Login</Link></li>
+
+
+              </>:<>
+              <li><button onClick={handleLogout} className=' !text-gray-600 cursor-pointer hover:text-gray-600'>Logout</button></li>
+
+                 
+              </>}
+              
+              
               <li><a href="#leaderboard">Leaderboard</a></li>
             </ul>
 

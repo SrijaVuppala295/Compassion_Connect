@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import images from "../assets/images";
+import '../styles/home.css';
+import { useAuth } from "../context/AuthContext";
 import "../styles/home.css";      // keep if header/navbar layout lives here
 import "../styles/navbar.css";    // new: navbar-specific styles
 
 const Navbar = () => {
+  
   return (
     <header className="header">
       <div className="container">
