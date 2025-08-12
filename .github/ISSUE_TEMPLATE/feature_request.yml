@@ -1,0 +1,56 @@
+name: 🚀 Feature Request
+description: Use this template to suggest new features or enhancements for the project.
+title: "[FEATURE REQUEST] "
+labels: enhancement
+
+body:
+  - type: input
+    id: feature_title
+    attributes:
+      label: Feature Title
+      description: A short and descriptive title for the feature.
+      placeholder: "E.g., Add dark mode support"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the feature and why it's useful.
+      placeholder: |
+        Please describe the feature in detail.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: How would this feature be used in the context of the project?
+      placeholder: |
+        Describe scenarios where this feature would be helpful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: Expected Outcome
+      description: What is the desired outcome of implementing this feature?
+      placeholder: |
+        Describe what you expect to happen once the feature is implemented.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (Optional)
+      description: Choose the priority level for this feature request.
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: false

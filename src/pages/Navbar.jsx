@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import images from "../assets/images";
+
 import '../styles/home.css';
 import FeedbackSection from "./feedback";
+     // keep if header/navbar layout lives here
+import "../styles/navbar.css";    // new: navbar-specific styles
+
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,22 +14,28 @@ const Navbar = () => {
     <header className={`header${darkMode ? ' dark-mode' : ''}`}>
       <div className="container">
         <nav className="navbar">
-          <Link to="/" className="logo" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <img src={images.logo1} alt="Logo" style={{ width: 70, height: 70, marginRight: 10 }} />
+          <Link to="/" className="logo">
+            <img src={images.logo1} alt="Logo" className="logo-img" />
             <div className="logo-text">
+
               <span style={{ color: darkMode ? "#ffffff" : "#1D2635", fontSize: "1.8rem", fontWeight: 700 }}>Compassion</span>
               <span style={{ color: darkMode ? "#FFD700" : "#B68E56", fontSize: "1.8rem", fontWeight: 700 }}>Connect</span>
+
+
             </div>
           </Link>
+
           <ul className="nav-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/causes">Our Causes</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/feedback">Feedback</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/ourteam">Team</a></li>
+
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/#about">About Us</Link></li>
+            <li><Link to="/#causes">Our Causes</Link></li>
+            <li><Link to="/#events">Events</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/logout">Logout</Link></li>
+            <li><Link to="/leaderboard">Leaderboard</Link></li>
+
           </ul>
           <button
             className="dark-mode-toggle"
